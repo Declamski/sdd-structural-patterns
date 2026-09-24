@@ -13,7 +13,6 @@ class StreamingFacade:
       # TODO: store the payment processor and start unsubscribed
       self._subscribed = False
       self._payment_processor = payment_processor
-      pass
 
     def subscribe(self, monthly_fee: float) -> str:
       self._subscribed = True
@@ -23,4 +22,3 @@ class StreamingFacade:
       if self._subscribed == False:
          raise PermissionError("subscription required")
       return video.play()
-      pass
